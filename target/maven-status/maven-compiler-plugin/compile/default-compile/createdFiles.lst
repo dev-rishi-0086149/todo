@@ -1,0 +1,11 @@
+com/devrishi/todo/bo/UserBO.class
+com/devrishi/todo/service/UserService.class
+com/devrishi/todo/contract/UserDTO.class
+com/devrishi/todo/contract/BaseResponseVO.class
+com/devrishi/todo/contract/TaskDTO.class
+com/devrishi/todo/boImpl/UserBOImpl.class
+com/devrishi/todo/repository/UserRepository.class
+com/devrishi/todo/serviceImpl/UserServiceImpl.class
+com/devrishi/todo/entity/UserEntity.class
+com/devrishi/util/StatusUtil.class
+com/devrishi/todo/contract/ResponseStatusVO.class
