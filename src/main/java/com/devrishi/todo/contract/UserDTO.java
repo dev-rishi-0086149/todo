@@ -1,26 +1,34 @@
 package com.devrishi.todo.contract;
 
-import lombok.Data;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 
-@Data
 public class UserDTO {
 	private int txnId;
+	
+	@NotNull(message = "Name cant be null")
 	private String name;
+	
+	@Email(message ="Invalid email")
+	@NotBlank(message= "Email cant be blank")
 	private String email;
+	
+	@NotNull
+	@Max(value=90,message="max allowed age 90")
+	@Min(value=18,message="min allowed age 18")
 	private int age;
+	
 	public int getTxnId() {
 		return txnId;
 	}
 	public void setTxnId(int txnId) {
 		this.txnId = txnId;
 	}
-	public UserDTO(int txnId, String name, String email, int age) {
-		super();
-		this.txnId = txnId;
-		this.name = name;
-		this.email = email;
-		this.age = age;
-	}
+	
 	public String getName() {
 		return name;
 	}
@@ -37,6 +45,13 @@ public class UserDTO {
 		return age;
 	}
 	public void setAge(int age) {
+		this.age = age;
+	}
+	public UserDTO(int txnId, String name, String email, int age) {
+		//super();
+		this.txnId = txnId;
+		this.name = name;
+		this.email = email;
 		this.age = age;
 	}
 }

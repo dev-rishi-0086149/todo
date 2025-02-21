@@ -5,4 +5,5 @@ import com.devrishi.todo.contract.UserDTO;
 
 public interface UserService {
 	public UserDTO getuserById(int userId);
+	public UserDTO postUserDetails(UserDTO userDetails);
 }

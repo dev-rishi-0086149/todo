@@ -4,4 +4,5 @@ import com.devrishi.todo.contract.UserDTO;
 
 public interface UserBO {
 	public UserDTO getUserById(int userId);
+	public UserDTO postUserDetails(UserDTO userDetails);
 }

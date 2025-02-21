@@ -20,5 +20,11 @@ public class UserBOImpl implements UserBO{
 		UserDTO userData = userService.getuserById(userId);
 		return userData;
 	}
+	
+	@Override
+	public UserDTO postUserDetails(UserDTO userDetails) {
+		UserDTO userData = userService.postUserDetails(userDetails);
+		return userData;
+	}
 
 }

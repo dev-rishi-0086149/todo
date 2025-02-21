@@ -1,9 +1,6 @@
 package com.devrishi.todo.contract;
 
-import lombok.Data;
 
-
-@Data
 public class BaseResponseVO {
 	private ResponseStatusVO status;
 	private Object response;

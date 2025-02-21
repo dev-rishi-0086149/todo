@@ -1,5 +1,6 @@
 package com.devrishi.todo.serviceImpl;
 
+import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,9 +18,17 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public UserDTO getuserById(int userId) {
 		
-		UserDTO userData = userRepository.findByTxnId(userId); 
-		
+		UserDTO userData = userRepository.findByTxnId(userId).orElseThrow(()->new RuntimeException("user not found with user id "+userId)); 
+
 		return  userData;
 	}
 	
+	@Override
+	public UserDTO postUserDetails(UserDTO userDetails) {
+		 DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
+		 UserEntity userEntity = dozerBeanMapper.map(userDetails,UserEntity.class);
+		 userRepository.save(userEntity);		 
+		 return userDetails;
+		 
+	}
 }

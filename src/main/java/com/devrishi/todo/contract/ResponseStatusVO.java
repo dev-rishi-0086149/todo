@@ -2,9 +2,8 @@ package com.devrishi.todo.contract;
 
 import java.time.LocalDateTime;
 
-import lombok.Data;
 
-@Data
+
 public class ResponseStatusVO {
 	private String message;
 	private LocalDateTime time;
