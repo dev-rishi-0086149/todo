@@ -9,7 +9,8 @@ E:\work\todo\src\main\java\com\devrishi\todo\controller\UserController.java
 E:\work\todo\src\main\java\com\devrishi\todo\entity\TaskEntity.java
 E:\work\todo\src\main\java\com\devrishi\todo\entity\UserEntity.java
 E:\work\todo\src\main\java\com\devrishi\todo\exception\GlobalExceptionHandler.java
+E:\work\todo\src\main\java\com\devrishi\todo\exception\ResourceNotFoundException.java
 E:\work\todo\src\main\java\com\devrishi\todo\repository\UserRepository.java
 E:\work\todo\src\main\java\com\devrishi\todo\service\UserService.java
 E:\work\todo\src\main\java\com\devrishi\todo\serviceImpl\UserServiceImpl.java
-E:\work\todo\src\main\java\com\devrishi\util\StatusUtil.java
+E:\work\todo\src\main\java\com\devrishi\todo\util\StatusUtil.java

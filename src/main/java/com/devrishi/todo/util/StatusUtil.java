@@ -1,4 +1,4 @@
-package com.devrishi.util;
+package com.devrishi.todo.util;
 
 import com.devrishi.todo.contract.ResponseStatusVO;
 import java.time.LocalDateTime; 

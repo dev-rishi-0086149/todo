@@ -13,6 +13,13 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     
+	
+
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<String> handleResourceNotFound(ResourceNotFoundException e) {
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+    }
+	
     // Handle general exceptions
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleGeneralException(Exception e) {
@@ -34,4 +41,5 @@ public class GlobalExceptionHandler {
         System.out.println("inside validation handler ");
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
+    
 }
