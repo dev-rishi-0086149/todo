@@ -1,5 +1,7 @@
 package com.devrishi.todo.serviceImpl;
 
+import java.util.Optional;
+
 import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,12 +28,17 @@ public class UserServiceImpl implements UserService{
 	
 	@Override
 	public UserDTO postUserDetails(UserDTO userDetails) {
+<<<<<<< HEAD
 		if(userRepository.existsByEmail(userDetails.getEmail())) throw new ResourceAlreadyExistException("email '"+ userDetails.getEmail() +"' already registered ");
 		
+=======
+		  if(userRepository.findByEmail(userDetails.getEmail()).isPresent()) 
+			  throw new ResourceAlreadyExistException("Email id "+userDetails.getEmail()+" already registered");
+		 
+>>>>>>> 5c3565d0f3b448a4598c6a2e83b2947e834eb347
 		 DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
 		 UserEntity userEntity = dozerBeanMapper.map(userDetails,UserEntity.class);
 		 userRepository.save(userEntity);		 
 		 return userDetails;
-		 
 	}
 }

@@ -29,7 +29,6 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
     }
     
-<<<<<<< HEAD
     @ExceptionHandler(ResourceAlreadyExistException.class)
     public ResponseEntity<BaseResponseVO> handleResourceAlreadyExistException(ResourceAlreadyExistException e){
     	BaseResponseVO response = new BaseResponseVO();
@@ -40,12 +39,6 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(response); //409
     }
     
-=======
-    @ExceptionHandler(ResourceAlreadyExistException .class)
-    public ResponseEntity<String> handleResourceAlreadyExist(ResourceAlreadyExistException e){
-    	return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
-    }
->>>>>>> 5c3565d0f3b448a4598c6a2e83b2947e834eb347
 	
     // Handle general exceptions
     @ExceptionHandler(Exception.class)

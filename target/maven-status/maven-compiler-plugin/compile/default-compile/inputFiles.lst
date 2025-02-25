@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/devrishithakur/Projects/JAVA_WORKSPACE/todo/src/main/java/com/devrishi/todo/App.java
 /Users/devrishithakur/Projects/JAVA_WORKSPACE/todo/src/main/java/com/devrishi/todo/bo/UserBO.java
 /Users/devrishithakur/Projects/JAVA_WORKSPACE/todo/src/main/java/com/devrishi/todo/boImpl/UserBOImpl.java
@@ -15,3 +16,23 @@
 /Users/devrishithakur/Projects/JAVA_WORKSPACE/todo/src/main/java/com/devrishi/todo/service/UserService.java
 /Users/devrishithakur/Projects/JAVA_WORKSPACE/todo/src/main/java/com/devrishi/todo/serviceImpl/UserServiceImpl.java
 /Users/devrishithakur/Projects/JAVA_WORKSPACE/todo/src/main/java/com/devrishi/todo/util/StatusUtil.java
+=======
+E:\work\todo\src\main\java\com\devrishi\todo\App.java
+E:\work\todo\src\main\java\com\devrishi\todo\bo\UserBO.java
+E:\work\todo\src\main\java\com\devrishi\todo\boImpl\UserBOImpl.java
+E:\work\todo\src\main\java\com\devrishi\todo\config\SecurityConfig.java
+E:\work\todo\src\main\java\com\devrishi\todo\contract\BaseResponseVO.java
+E:\work\todo\src\main\java\com\devrishi\todo\contract\ResponseStatusVO.java
+E:\work\todo\src\main\java\com\devrishi\todo\contract\TaskDTO.java
+E:\work\todo\src\main\java\com\devrishi\todo\contract\UserDTO.java
+E:\work\todo\src\main\java\com\devrishi\todo\controller\UserController.java
+E:\work\todo\src\main\java\com\devrishi\todo\entity\TaskEntity.java
+E:\work\todo\src\main\java\com\devrishi\todo\entity\UserEntity.java
+E:\work\todo\src\main\java\com\devrishi\todo\exception\GlobalExceptionHandler.java
+E:\work\todo\src\main\java\com\devrishi\todo\exception\ResourceAlreadyExistException.java
+E:\work\todo\src\main\java\com\devrishi\todo\exception\ResourceNotFoundException.java
+E:\work\todo\src\main\java\com\devrishi\todo\repository\UserRepository.java
+E:\work\todo\src\main\java\com\devrishi\todo\service\UserService.java
+E:\work\todo\src\main\java\com\devrishi\todo\serviceImpl\UserServiceImpl.java
+E:\work\todo\src\main\java\com\devrishi\todo\util\StatusUtil.java
+>>>>>>> 5c3565d0f3b448a4598c6a2e83b2947e834eb347

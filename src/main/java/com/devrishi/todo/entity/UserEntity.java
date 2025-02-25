@@ -22,6 +22,17 @@ public class UserEntity {
 	
 	@Column(name ="age")
 	private int age;
+	
+	@Column (name="password")
+	private String password;
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public int getTxnId() {
 		return txnId;
