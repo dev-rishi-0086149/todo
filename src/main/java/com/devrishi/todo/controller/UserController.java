@@ -46,23 +46,14 @@ public class UserController {
 	public ResponseEntity<BaseResponseVO> postUser(@Valid @RequestBody UserDTO userdetails) {
 		BaseResponseVO response = new BaseResponseVO();
 		ResponseStatusVO status;
-		try {
-			UserDTO userDetails = userBO.postUserDetails(userdetails);
-			status = StatusUtil.getStatus("SUCCESS");
-			response.setResponse(userDetails);
-			response.setStatus(status);
-		} catch (Exception e) {
-			status = StatusUtil.getStatus("FAILED TO POST USER DATA : " + e.getMessage());
-			response.setStatus(status);
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
-		}
+
+		UserDTO userDetails = userBO.postUserDetails(userdetails);
+		status = StatusUtil.getStatus("SUCCESS");
+		response.setResponse(userDetails);
+		response.setStatus(status);
+
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
-
-//	@DeleteMapping("/{id}")
-//	public ResponseEntity<BaseResponseVO> deleteUser(@PathVariable int id){
-//		
-//	}
-//	
+	
 
 }

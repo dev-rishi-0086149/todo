@@ -12,4 +12,6 @@ public interface UserRepository extends JpaRepository<UserEntity, Integer>{
 	
 	@Query("SELECT new com.devrishi.todo.contract.UserDTO(b.txnId ,b.name , b.email , b.age) FROM UserEntity b where b.txnId =?1")
 	Optional<UserDTO> findByTxnId(int userId);
+
+	Optional<UserEntity> findByEmail(String email);
 }

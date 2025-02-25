@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 public class UserDTO {
 	private int txnId;
@@ -21,6 +22,18 @@ public class UserDTO {
 	@Max(value=90,message="max allowed age 90")
 	@Min(value=18,message="min allowed age 18")
 	private int age;
+	
+	@NotNull
+	@Size(min = 5, max = 15, message = "password must be between 5 and 15 characters")
+	private String password ;
+	
+	public String getPassword() {
+		return password;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	
 	public int getTxnId() {
 		return txnId;
