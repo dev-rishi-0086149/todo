@@ -16,9 +16,7 @@ public class UserBOImpl implements UserBO{
 	@Autowired
 	UserService userService;
 
-	/*
-	 * @Autowired private PasswordEncoder passwordEncoder;
-	 */
+	
 	
 	@Override
 	public UserDTO getUserById(int userId) {

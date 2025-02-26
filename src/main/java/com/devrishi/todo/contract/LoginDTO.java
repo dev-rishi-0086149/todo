@@ -2,6 +2,11 @@ package com.devrishi.todo.contract;
 
 
 public class LoginDTO {
+	@Override
+	public String toString() {
+		return "LoginDTO [email=" + email + ", password=" + password + "]";
+	}
+
 	private String email;
 	
 	private String password;

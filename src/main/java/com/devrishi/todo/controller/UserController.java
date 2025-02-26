@@ -42,25 +42,22 @@ public class UserController {
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
 
-	@PostMapping("/")
+	@PostMapping("")
 	public ResponseEntity<BaseResponseVO> postUser(@Valid @RequestBody UserDTO userdetails) {
+		System.out.println("insi9de the post");
 		BaseResponseVO response = new BaseResponseVO();
-<<<<<<< HEAD
 		UserDTO userDetails = userBO.postUserDetails(userdetails);
 		ResponseStatusVO status =StatusUtil.getStatus("SUCCESS");
 		response.setResponse(userDetails);
 		response.setStatus(status);
-=======
-		ResponseStatusVO status;
-
-		UserDTO userDetails = userBO.postUserDetails(userdetails);
-		status = StatusUtil.getStatus("SUCCESS");
-		response.setResponse(userDetails);
-		response.setStatus(status);
-
->>>>>>> 5c3565d0f3b448a4598c6a2e83b2947e834eb347
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
+
+//	@DeleteMapping("/{id}")
+//	public ResponseEntity<BaseResponseVO> deleteUser(@PathVariable int id){
+//		BaseResponseVo response = new BaseResponseVO();
+//		
+//	}
 	
 
 }

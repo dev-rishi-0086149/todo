@@ -11,6 +11,7 @@ import com.devrishi.todo.contract.BaseResponseVO;
 import com.devrishi.todo.contract.ResponseStatusVO;
 import com.devrishi.todo.util.StatusUtil;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,11 +26,10 @@ public class GlobalExceptionHandler {
     	ResponseStatusVO status = StatusUtil.getStatus("false");
     	response.setStatus(status);
     	response.setResponse(e.getMessage());
-    	
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
     }
     
-<<<<<<< HEAD
+
     @ExceptionHandler(ResourceAlreadyExistException.class)
     public ResponseEntity<BaseResponseVO> handleResourceAlreadyExistException(ResourceAlreadyExistException e){
     	BaseResponseVO response = new BaseResponseVO();
@@ -40,18 +40,14 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(response); //409
     }
     
-=======
-    @ExceptionHandler(ResourceAlreadyExistException .class)
-    public ResponseEntity<String> handleResourceAlreadyExist(ResourceAlreadyExistException e){
-    	return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
-    }
->>>>>>> 5c3565d0f3b448a4598c6a2e83b2947e834eb347
+
 	
     // Handle general exceptions
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleGeneralException(Exception e) {
     	System.out.println("inside general validation handler ");
-    	return new ResponseEntity<>("An error occurred: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+    	System.out.println(Arrays.toString(e.getStackTrace()));
+    	return new ResponseEntity<>("An error occurred: " + e.getMessage()+e.getClass(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     
@@ -72,6 +68,13 @@ public class GlobalExceptionHandler {
     	return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
     }
     
+    @ExceptionHandler(InvalidCredentialException.class)
+    public ResponseEntity<BaseResponseVO> handleInvalidCredentialException(InvalidCredentialException e){
+    	BaseResponseVO response = new BaseResponseVO();
+    	response.setStatus(StatusUtil.getStatus("false"));
+    	response.setResponse(e.getMessage());
+    	return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
+    }
     
    
     
