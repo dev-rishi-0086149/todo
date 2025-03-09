@@ -1,4 +1,5 @@
 /Users/devrishithakur/Projects/JAVA_WORKSPACE/todo/src/main/java/com/devrishi/todo/App.java
+/Users/devrishithakur/Projects/JAVA_WORKSPACE/todo/src/main/java/com/devrishi/todo/aspect/LoggingAspect.java
 /Users/devrishithakur/Projects/JAVA_WORKSPACE/todo/src/main/java/com/devrishi/todo/bo/AuthBO.java
 /Users/devrishithakur/Projects/JAVA_WORKSPACE/todo/src/main/java/com/devrishi/todo/bo/UserBO.java
 /Users/devrishithakur/Projects/JAVA_WORKSPACE/todo/src/main/java/com/devrishi/todo/boImpl/AuthBOImpl.java

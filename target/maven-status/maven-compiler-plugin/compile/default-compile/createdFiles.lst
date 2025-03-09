@@ -10,6 +10,7 @@ com/devrishi/todo/boImpl/AuthBOImpl.class
 com/devrishi/todo/exception/GlobalExceptionHandler.class
 com/devrishi/todo/controller/UserController.class
 com/devrishi/todo/bo/UserBO.class
+com/devrishi/todo/aspect/LoggingAspect.class
 com/devrishi/todo/service/UserService.class
 com/devrishi/todo/exception/InvalidCredentialException.class
 com/devrishi/todo/serviceImpl/AuthServiceImpl.class
